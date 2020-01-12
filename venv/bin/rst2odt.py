@@ -1,4 +1,4 @@
-#!/Users/davidpinezich/teaching/APYD/HS19/starter_hs19/venv/bin/python
+#!/Users/davidpinezich/teaching/APYD/HS19/apyd_hs19/venv/bin/python
 
 # $Id: rst2odt.py 5839 2009-01-07 19:09:28Z dkuhlman $
 # Author: Dave Kuhlman <dkuhlman@rexx.com>

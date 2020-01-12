@@ -1,4 +1,4 @@
-#!/Users/davidpinezich/teaching/APYD/HS19/starter_hs19/venv/bin/python
+#!/Users/davidpinezich/teaching/APYD/HS19/apyd_hs19/venv/bin/python
 
 # $Id: rstpep2html.py 4564 2006-05-21 20:44:42Z wiemann $
 # Author: David Goodger <goodger@python.org>

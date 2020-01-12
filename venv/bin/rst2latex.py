@@ -1,4 +1,4 @@
-#!/Users/davidpinezich/teaching/APYD/HS19/starter_hs19/venv/bin/python
+#!/Users/davidpinezich/teaching/APYD/HS19/apyd_hs19/venv/bin/python
 
 # $Id: rst2latex.py 5905 2009-04-16 12:04:49Z milde $
 # Author: David Goodger <goodger@python.org>

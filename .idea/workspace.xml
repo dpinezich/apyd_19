@@ -22,10 +22,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../apyd_hs19/slides" />
       <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.imdb">
+  <component name="RunManager" selected="Python.3d_cube (1)">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="apyd_hs19" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,6 +71,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="3d_cube (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="apyd_hs19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../apyd_hs19/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../apyd_hs19/test/3d_cube.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="3d_cube" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -222,6 +245,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.3d_cube (1)" />
         <item itemvalue="Python.imdb" />
         <item itemvalue="Python.3d_cube" />
       </list>
@@ -250,7 +274,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577728927124</updated>
       <workItem from="1577728932569" duration="2564000" />
-      <workItem from="1578851366895" duration="781000" />
+      <workItem from="1578851366895" duration="2185000" />
     </task>
     <servers />
   </component>
@@ -258,26 +282,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1679" height="322" key="GridCell.Tab.0.bottom" timestamp="1578852273263">
+    <state width="1679" height="322" key="GridCell.Tab.0.bottom" timestamp="1578853684370">
       <screen x="44" y="23" width="3396" height="1417" />
     </state>
-    <state width="1679" height="322" key="GridCell.Tab.0.bottom/44.23.3396.1417@44.23.3396.1417" timestamp="1578852273263" />
-    <state width="1679" height="322" key="GridCell.Tab.0.center" timestamp="1578852273262">
+    <state width="1679" height="322" key="GridCell.Tab.0.bottom/44.23.3396.1417@44.23.3396.1417" timestamp="1578853684370" />
+    <state width="1679" height="322" key="GridCell.Tab.0.center" timestamp="1578853684369">
       <screen x="44" y="23" width="3396" height="1417" />
     </state>
-    <state width="1679" height="322" key="GridCell.Tab.0.center/44.23.3396.1417@44.23.3396.1417" timestamp="1578852273262" />
-    <state width="1679" height="322" key="GridCell.Tab.0.left" timestamp="1578852273262">
+    <state width="1679" height="322" key="GridCell.Tab.0.center/44.23.3396.1417@44.23.3396.1417" timestamp="1578853684369" />
+    <state width="1679" height="322" key="GridCell.Tab.0.left" timestamp="1578853684369">
       <screen x="44" y="23" width="3396" height="1417" />
     </state>
-    <state width="1679" height="322" key="GridCell.Tab.0.left/44.23.3396.1417@44.23.3396.1417" timestamp="1578852273262" />
-    <state width="1679" height="322" key="GridCell.Tab.0.right" timestamp="1578852273263">
+    <state width="1679" height="322" key="GridCell.Tab.0.left/44.23.3396.1417@44.23.3396.1417" timestamp="1578853684368" />
+    <state width="1679" height="322" key="GridCell.Tab.0.right" timestamp="1578853684370">
       <screen x="44" y="23" width="3396" height="1417" />
     </state>
-    <state width="1679" height="322" key="GridCell.Tab.0.right/44.23.3396.1417@44.23.3396.1417" timestamp="1578852273263" />
-    <state x="612" y="292" key="SettingsEditor" timestamp="1578851683884">
+    <state width="1679" height="322" key="GridCell.Tab.0.right/44.23.3396.1417@44.23.3396.1417" timestamp="1578853684370" />
+    <state x="320" y="386" key="SettingsEditor" timestamp="1578854451561">
       <screen x="44" y="23" width="3396" height="1417" />
     </state>
-    <state x="612" y="292" key="SettingsEditor/44.23.3396.1417@44.23.3396.1417" timestamp="1578851683884" />
+    <state x="320" y="386" key="SettingsEditor/44.23.3396.1417@44.23.3396.1417" timestamp="1578854451561" />
     <state x="1842" y="480" key="chooseDestDirectoryDialog" timestamp="1578851959019">
       <screen x="44" y="23" width="3396" height="1417" />
     </state>
@@ -290,5 +314,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/apyd_hs19$imdb.coverage" NAME="imdb Coverage Results" MODIFIED="1578851709141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../apyd_hs19/exercises/imdb_exercise" />
     <SUITE FILE_PATH="coverage/starter_hs19$3d_cube.coverage" NAME="3d_cube Coverage Results" MODIFIED="1578851454391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/apyd_hs19$3d_cube__1_.coverage" NAME="3d_cube (1) Coverage Results" MODIFIED="1578852556796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../apyd_hs19/test" />
   </component>
 </project>

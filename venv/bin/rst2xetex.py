@@ -1,4 +1,4 @@
-#!/Users/davidpinezich/teaching/APYD/HS19/starter_hs19/venv/bin/python
+#!/Users/davidpinezich/teaching/APYD/HS19/apyd_hs19/venv/bin/python
 
 # $Id: rst2xetex.py 7847 2015-03-17 17:30:47Z milde $
 # Author: Guenter Milde

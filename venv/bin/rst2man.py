@@ -1,6 +1,6 @@
-#!/Users/davidpinezich/teaching/APYD/HS19/starter_hs19/venv/bin/python
+#!/Users/davidpinezich/teaching/APYD/HS19/apyd_hs19/venv/bin/python
 
-# Author: 
+# Author:
 # Contact: grubert@users.sf.net
 # Copyright: This module has been placed in the public domain.
 
