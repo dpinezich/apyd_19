@@ -94,6 +94,8 @@ add_empty_lines()
 """
 
 # Implement here
+sorted_movies = sorted(movies, key=lambda movie: movie['rating'], reverse=True)
+
 add_empty_lines()
 
 """
@@ -102,7 +104,26 @@ add_empty_lines()
 """
 
 # Implement here
+
+output_file.write('Best rated movies with more than 5000 votes:\n\n')
+
+count_selected_movies = 0
+
+for movie in sorted_movies:
+
+    if movie['votes'] <= 5000:
+        continue
+
+    count_selected_movies += 1
+    output_file.write('Title: {} rating: {}\n'.format(movie['title'], movie['rating']))
+
+    if count_selected_movies >= 10:
+        break
+
 add_empty_lines()
+
+
+
 
 """
  Part 7:
@@ -110,15 +131,54 @@ add_empty_lines()
 """
 
 # Implement here
+output_file.write("Best rated movies with a budget lower than 1'000'000 :\n\n")
+
+count_selected_movies = 0
+
+for movie in sorted_movies:
+
+    if movie['budget'] is None or movie['budget'] >= 1000000:
+        continue
+
+    count_selected_movies += 1
+    output_file.write('Title: {} rating: {} budget: {}\n'.format(movie['title'], movie['rating'], movie['budget']))
+
+    if count_selected_movies >= 10:
+        break
+
 add_empty_lines()
 
 """
  Part 8:
  Write the 10 best rated movies with a budget of less than 1,000,000 USD and more than 5000 votes into the output_file
 """
+
 output_file.write('Best rated movies with budget lower than 1,000,000 USD and more than 5000 votes:\n\n')
 
-# Implement here
-add_empty_lines()
+count_selected_movies = 0
+for movie in sorted_movies:
+
+    if movie['budget'] is None or movie['budget'] >= 1000000 or movie['votes'] <= 5000:
+        continue
+
+    count_selected_movies += 1
+    output_file.write("Title: {} rating: {} budget: {} \n".format(movie['title'], movie['rating'], movie['budget']))
+
+    if count_selected_movies >= 10:
+        break
 
 output_file.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+

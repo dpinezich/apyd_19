@@ -7,7 +7,7 @@ import nltk
 nltk.data.path.append("nltk_data")
 
 # 'review_files/Kindle_Store.txt'
-reviews = file_reader.read_review_file('review_files/Watches.txt', max_reviews=500)
+reviews = file_reader.read_review_file('review_files/Kindle_Store.txt', max_reviews=5000)
 stats.print_review_statistics(reviews)
 
 visualization.create_review_length_boxplot(reviews, 'watches_review_length.svg')
