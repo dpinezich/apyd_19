@@ -18,6 +18,23 @@ def add_empty_lines():
 """
 
 # Implement here
+
+movie_reader = csv.reader(movies_file)
+next(movie_reader)
+
+for row in movie_reader:
+    movie = {
+        'title': row[1],
+        'year': int(row[2]),
+        'length': int(row[3]) if row[3].isdigit() else None,
+        'budget': int(row[4]) if row[4].isdigit() else None,
+        'rating': float(row[5]) if row[5].replace(".", "", 1).isdigit() else None,
+        'votes': int(row[6]) if row[6].isdigit() else None
+    }
+
+    movies.append(movie)
+
+
 add_empty_lines()
 
 
@@ -27,6 +44,10 @@ add_empty_lines()
 """
 
 # Implement here
+#output_file.write('Number of movies: {}'.format(len(movies)))
+output_file.write('Number of movies:')
+output_file.write(str(len(movies)))
+
 add_empty_lines()
 
 """
@@ -36,6 +57,11 @@ add_empty_lines()
 """
 
 # Implement here
+zero_movie_counter = 0
+
+for movie in movies:
+    if movie['title'].startswith('Zero'):
+        zero_movie_counter += 1
 add_empty_lines()
 
 """
@@ -44,6 +70,22 @@ add_empty_lines()
 """
 
 # Implement here
+
+sum_rating = 0
+sum_votes = 0
+
+counter_rating = 0
+counter_votes = 0
+
+for movie in movies:
+    if movie['rating'] is not None:
+        sum_rating += movie['rating']
+        counter_rating += 1
+
+    if movie['votes'] is not None:
+        sum_votes += movie['rating']
+        counter_votes += 1
+
 add_empty_lines()
 
 """
