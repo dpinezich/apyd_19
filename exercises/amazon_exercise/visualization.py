@@ -14,12 +14,12 @@ def create_wordcloud(processed_text, filename):
     :param filename:
     :return:
     """
-    pyplot.clf()
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+
+    pyplot.clf()
+    wordcloud = WordCloud(background_color='white', max_font_size=40, relative_scaling=.5).generate(' '.join(processed_text))
+    pyplot.imshow(wordcloud)
+    pyplot.axis('off')
 
     pyplot.savefig(filename)
 
@@ -38,6 +38,7 @@ def create_review_length_boxplot(reviews, filename, box_mode='tukey'):
     three_star_review_lengths = []
     four_star_review_lengths = []
     five_star_review_lengths = []
+
     for review in reviews:
         score = int(review['review/score'])
         review_length = len(review['review/text'].split(' '))
@@ -74,11 +75,20 @@ def create_score_barchart(reviews, filename):
     :param filename:
     :return:
     """
-    line_chart = pygal.Bar()
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    score_counter = [0, 0, 0, 0, 0]
 
-    line_chart.render_to_file(filename)
+    for review in reviews:
+        score = int(review['review/score'])
+        score_counter[score - 1] += 1
+
+
+
+    bar_chart = pygal.Bar()
+    bar_chart.add('Scores', score_counter)
+    bar_chart.add('Scores (2)', score_counter)
+
+    bar_chart.title = "Amazon review score"
+    bar_chart.x_labels = ['1 Star', '2 Star', '3 Star', '4 Star', '5 Star']
+
+    bar_chart.render_to_file(filename)
