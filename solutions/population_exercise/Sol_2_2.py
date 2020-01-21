@@ -7,8 +7,8 @@
 
 import requests
 import pygal
-from population_exercise import Sol_2_1
-from population_exercise.helper import get_the_top_n, print_2d_list
+import Sol_2_1
+from helper import get_the_top_n
 
 countries_list = Sol_2_1.get_clean_country_list()
 

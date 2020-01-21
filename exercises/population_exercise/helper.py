@@ -7,3 +7,13 @@ def get_the_top_n(sort_list, n, sort_argument, reverse):
     sort_argument   -- lambda argument with the info what key to sort
     reverse         -- True for descending False for ascending
     """
+
+    sort_list = sorted(sort_list, key=sort_argument, reverse=reverse)
+    top_sort_list = []
+
+    counter = 0
+    while counter < n:
+        top_sort_list.append([sort_list[counter][0], str(sort_list[counter][1])])
+        counter += 1
+
+    return top_sort_list

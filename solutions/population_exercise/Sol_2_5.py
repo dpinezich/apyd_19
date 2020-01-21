@@ -7,7 +7,7 @@
 
 import requests
 import numpy
-from population_exercise import Sol_2_1
+import Sol_2_1
 
 # Additional functions
 def get_life_expectancy(sex, country):

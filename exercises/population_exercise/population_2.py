@@ -7,8 +7,8 @@
 
 import requests
 import pygal
-from population_exercise import population_1
-from population_exercise.helper import get_the_top_n
+import population_1
+from helper import get_the_top_n
 
 countries_list = population_1.get_clean_country_list()
 
@@ -20,6 +20,20 @@ def print_visual_dots(title, print_list):
     Keyword arguments:
     print_list -- the list which has to be printed
     """
+
+    countries = []
+    numbers = []
+
+    for item in print_list:
+        countries.append(item[0])
+        numbers.append(int(item[1]) / 1000000)
+
+    dot_chart = pygal.Dot(x_label_rotation=30)
+    dot_chart.title = title
+    dot_chart.x_labels = countries
+    dot_chart.add('Countries', numbers)
+    dot_chart.render_in_browser()
+
 
 
     # Implementation...
@@ -39,12 +53,8 @@ def print_2d_list(print_list):
         India - 1382038624
     """
 
-
-    # Implementation...
-    # ...
-    # ...
-    # ...
-
+    for item in print_list:
+        print(' - '.join(item))
 
 
 # General sourcecode
