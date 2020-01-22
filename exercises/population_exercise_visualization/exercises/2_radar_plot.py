@@ -30,11 +30,10 @@ def get_life_expectancy(sex, country, year):
     year    -- year of life expectancy
     """
 
+    date = str(year) + '-01-01'
+    data = requests.get('http://d6wn6bmjj722w.population.io/1.0/life-expectancy/total/{}/{}/{}/'.format(sex, country, date))
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    return data.json()["total_life_expectancy"] / 100
 
 
 def get_average_life_expectancy(country, year):
@@ -45,11 +44,7 @@ def get_average_life_expectancy(country, year):
     year    -- year of life expectancy
     """
 
-
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    return (get_life_expectancy('female', country, year) + get_life_expectancy("male", country, year)) / 2
 
 
 
@@ -60,12 +55,13 @@ def get_current_relative_population_of(country):
     :return: relative population of the given country
     """
 
+    population = requests.get('http://d6wn6bmjj722w.population.io/1.0/population/{}/today-and-tomorrow/'.format(country))
+    total_population = population.json()['total_population']
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    world_population = requests.get('http://d6wn6bmjj722w.population.io/1.0/population/World/today-and-tomorrow/')
+    world_total_population = world_population.json()['total_population']
 
+    return float(total_population[0]['population']) / float(world_total_population[0]['population'])
 
 
 def get_relative_growth(country):
@@ -75,11 +71,11 @@ def get_relative_growth(country):
     country -- the name of the country (defined by population.io)
     """
 
+    population = requests.get('http://d6wn6bmjj722w.population.io/1.0/population/{}/today-and-tomorrow/'.format(country))
+    total_population = population.json()['total_population']
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    return float(total_population[1]['population']) / float(total_population[0]['population'])
+
 
 
 
@@ -91,13 +87,15 @@ def get_characteristic_country_numbers(country, year):
     :return:
     """
 
+    data = []
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    data.append(get_current_relative_population_of(country))
+    data.append(get_life_expectancy('female', country, year))
+    data.append(get_life_expectancy('male', country, year))
+    data.append(get_average_life_expectancy(country, year))
+    data.append(get_relative_growth(country))
 
-
+    return data
 
 def get_data_plot_lists(countries_list, year):
     """prepares the data structure containing the data which will be printed
@@ -107,11 +105,12 @@ def get_data_plot_lists(countries_list, year):
     :return: list with all the needed data
     """
 
+    plot_data_list = []
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    for country in countries_list:
+        plot_data_list.append([country, get_characteristic_country_numbers(country, year)])
+
+    return plot_data_list
 
 
 
@@ -126,11 +125,15 @@ def write_plot_to_browser(plot_title, x_labels_map, list_plot_data):
     :return: picture in default web browser
     """
 
+    radar_chart = pygal.Radar()
+    radar_chart.title = plot_title
+    radar_chart.x_labels = x_labels_map
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    for plot_data in list_plot_data:
+        values = plot_data[1]
+        radar_chart.add(plot_data[0], values)
+
+    radar_chart.render_in_browser()
 
 
 # General sourcecode (already complete)

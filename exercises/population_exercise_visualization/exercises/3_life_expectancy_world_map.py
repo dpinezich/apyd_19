@@ -203,11 +203,10 @@ def get_life_expectancy(sex, country, year):
     year    -- year of life expectancy
     """
 
+    date = str(year) + '-01-01'
+    data = requests.get('http://d6wn6bmjj722w.population.io/1.0/life-expectancy/total/{}/{}/{}/'.format(sex, country, date))
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    return data.json()["total_life_expectancy"]
 
 
 def get_average_life_expectancy(country, year):
@@ -218,11 +217,7 @@ def get_average_life_expectancy(country, year):
     year    -- year of life expectancy
     """
 
-
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    return (get_life_expectancy('female', country, year) + get_life_expectancy("male", country, year)) / 2
 
 def write_plot_to_browser(title, plot_data_dict, year):
     """
@@ -233,11 +228,10 @@ def write_plot_to_browser(title, plot_data_dict, year):
     :return: picture in default web browser
     """
 
-
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    worldmap_chart = pygal.maps.world.World()
+    worldmap_chart.title = title
+    worldmap_chart.add('In ' + str(year), plot_data_dict)
+    worldmap_chart.render_in_browser()
 
 
 

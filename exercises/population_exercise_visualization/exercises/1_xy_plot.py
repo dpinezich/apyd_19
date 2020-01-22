@@ -48,14 +48,10 @@ def get_life_expectancy(sex, country, year):
     # get use a html request to get the life expectancy from population.io
     # Request the 1st of January for the given year
 
+    date = str(year) + '-01-01'
+    data = requests.get('http://d6wn6bmjj722w.population.io/1.0/life-expectancy/total/{}/{}/{}/'.format(sex, country, date))
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
-
-
-    return 80
+    return data.json()["total_life_expectancy"]
 
 
 def get_average_life_expectancy(country, year):
@@ -65,13 +61,9 @@ def get_average_life_expectancy(country, year):
     country -- the name of the country (defined by population.io)
     year    -- year of life expectancy
     """
-    pass
 
+    return (get_life_expectancy('female', country, year) + get_life_expectancy("male", country, year)) / 2
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
 
 
 
@@ -84,22 +76,22 @@ def get_average_life_expectancy_of_country_for_years(country, year_list):
     """
     data = []
 
+    for year in year_list:
+        data.append(get_average_life_expectancy(country, year))
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    return data
 
 
 
 def get_data_plot_lists(countries_list, year_list):
-    pass
+
+    plot_data_list = []
+
+    for country in countries_list:
+        plot_data_list.append([country, get_average_life_expectancy_of_country_for_years(country, year_list)])
 
 
-    # Implementation...
-    # ...
-    # ...
-    # ...
+    return plot_data_list
 
 
 
